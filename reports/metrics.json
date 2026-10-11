@@ -1,0 +1,67 @@
+{
+  "data": {
+    "source": "synthetic",
+    "train_loans": 45016,
+    "oot_loans": 14984,
+    "train_default_rate": 0.1271770037320064,
+    "oot_default_rate": 0.15002669514148426,
+    "oot_cutoff": "2024-07-01"
+  },
+  "scorecard_oot": {
+    "auc": 0.7634436745281121,
+    "gini": 0.5268873490562243,
+    "ks": 0.38946958994259556,
+    "brier": 0.11109632860399826,
+    "default_rate": 0.15002669514148426,
+    "mean_pd": 0.1465527613841999
+  },
+  "gbm_challenger_oot": {
+    "auc": 0.7699827959861585,
+    "gini": 0.539965591972317,
+    "ks": 0.4077979979971029,
+    "brier": 0.10920609113474887,
+    "default_rate": 0.15002669514148426,
+    "mean_pd": 0.14655791238580235
+  },
+  "scorecard_train": {
+    "auc": 0.7765995768445477,
+    "gini": 0.5531991536890954,
+    "ks": 0.417164889589369,
+    "brier": 0.09647372156024853,
+    "default_rate": 0.1271770037320064,
+    "mean_pd": 0.12719668203037385
+  },
+  "selected_features": [
+    "fico",
+    "annual_income",
+    "dti",
+    "revolving_util",
+    "inquiries_6m",
+    "delinq_2yrs",
+    "term"
+  ],
+  "information_value": {
+    "fico": 0.8376,
+    "revolving_util": 0.2145,
+    "dti": 0.1827,
+    "inquiries_6m": 0.1776,
+    "delinq_2yrs": 0.1073,
+    "annual_income": 0.0346,
+    "term": 0.0263,
+    "loan_amount": 0.0099,
+    "purpose": 0.0079,
+    "emp_length_yrs": 0.0052,
+    "home_ownership": 0.0032,
+    "open_accounts": 0.0025
+  },
+  "score_psi": 0.031057470350909444,
+  "feature_csi": {
+    "fico": 0.0279,
+    "annual_income": 0.0005,
+    "dti": 0.0008,
+    "revolving_util": 0.0319,
+    "inquiries_6m": 0.0045,
+    "delinq_2yrs": 0.0026,
+    "term": null
+  }
+}
