@@ -5,8 +5,8 @@ an interpretable **Weight-of-Evidence logistic-regression scorecard** as the cha
 **monotonic gradient-boosting** challenger, **out-of-time validation**, **PSI monitoring**, and
 **adverse-action reason codes** for declined applicants (ECOA / Regulation B).
 
-**Live demo:** an interactive scorecard page lets you change an applicant's credit file and watch the
-score, PD, decision band and reason codes update (link in the repo description).
+**[Live demo: Loan Scorecard Studio](https://claude.ai/artifact/AspKCPDxkuDqAvDKjb6XoQ)**: change an
+applicant's credit file and watch the score, PD, decision band and reason codes update.
 
 ![Model performance](reports/model_performance.png)
 
