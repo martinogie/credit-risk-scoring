@@ -34,7 +34,7 @@ applicant's credit file and watch the score, PD, decision band and reason codes 
 | Pipeline | `credit_risk/train.py` | Out-of-time split → fit → report, plots and artifacts in `reports/` |
 | Scoring | `credit_risk/score.py` | Score one applicant from JSON and return reasons |
 | Tests | `tests/` | Monotonicity, OOT split, points ↔ PD consistency, reason codes, PSI |
-| Demo | `web/`, `docs/` | Static scoring page generated from `reports/scorecard.json`; `docs/` is served by GitHub Pages |
+| Demo | `web/`, `index.html` | Static scoring page generated from `reports/scorecard.json`; `index.html` is served by GitHub Pages |
 
 Feature selection keeps attributes with IV ≥ 0.02. Selected: fico, annual_income, dti, revolving_util, inquiries_6m, delinq_2yrs, term.
 
