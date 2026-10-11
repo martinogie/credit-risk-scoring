@@ -1,6 +1,6 @@
 """Rebuild the demo page from the latest training outputs in reports/.
 
-Writes web/index.html (page body) and docs/index.html (standalone page served by GitHub Pages).
+Writes web/index.html (page body) and index.html (standalone page served by GitHub Pages).
 """
 import json
 from pathlib import Path
@@ -19,6 +19,5 @@ head = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
 # Move the page's own <title>, font links and <style> into <head>; the rest goes in <body>.
 split = body.index('<div class="wrap">')
 page = head + body[:split] + "</head>\n<body>\n" + body[split:] + "\n</body>\n</html>\n"
-(root / "docs").mkdir(exist_ok=True)
-(root / "docs/index.html").write_text(page)
-print("wrote web/index.html and docs/index.html")
+(root / "index.html").write_text(page)
+print("wrote web/index.html and index.html")
