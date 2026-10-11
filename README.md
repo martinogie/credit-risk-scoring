@@ -5,7 +5,7 @@ an interpretable **Weight-of-Evidence logistic-regression scorecard** as the cha
 **monotonic gradient-boosting** challenger, **out-of-time validation**, **PSI monitoring**, and
 **adverse-action reason codes** for declined applicants (ECOA / Regulation B).
 
-**[Live demo: Loan Scorecard Studio](https://claude.ai/artifact/AspKCPDxkuDqAvDKjb6XoQ)**: change an
+**[Live demo: Loan Scorecard Studio](https://martinogie.github.io/credit-risk-scoring/)**: change an
 applicant's credit file and watch the score, PD, decision band and reason codes update.
 
 ![Model performance](reports/model_performance.png)
@@ -34,7 +34,7 @@ applicant's credit file and watch the score, PD, decision band and reason codes 
 | Pipeline | `credit_risk/train.py` | Out-of-time split → fit → report, plots and artifacts in `reports/` |
 | Scoring | `credit_risk/score.py` | Score one applicant from JSON and return reasons |
 | Tests | `tests/` | Monotonicity, OOT split, points ↔ PD consistency, reason codes, PSI |
-| Demo | `web/` | Static scoring page generated from `reports/scorecard.json` |
+| Demo | `web/`, `docs/` | Static scoring page generated from `reports/scorecard.json`; `docs/` is served by GitHub Pages |
 
 Feature selection keeps attributes with IV ≥ 0.02. Selected: fico, annual_income, dti, revolving_util, inquiries_6m, delinq_2yrs, term.
 
@@ -79,6 +79,10 @@ known, you can check that the model recovers them.
 - **Validation:** out-of-time holdout, decile calibration (`reports/oot_decile_calibration.csv`),
   champion/challenger comparison, and monthly PSI (`reports/oot_monthly_monitoring.csv`).
 - **Documentation:** `reports/MODEL_REPORT.md` is generated on every run.
+
+## How this was built
+
+Built with AI-assisted coding (Claude). Modeling choices, validation and review are my own.
 
 ## License
 
